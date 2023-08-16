@@ -9,7 +9,11 @@ DROP TABLE IF EXISTS employees;
 -- TABLE CREATION
 -- employees
 -- Has the 'more important' primary key of emp_no
--- Everything is not null because we aren't aware of what is important. 
+-- Everything is NOT NULL because we aren't aware of what is important to those who are accessing the data.
+-- Our Professor asked us to treat this as we are in HR. Therefore, I will assume that all values should be NOT NULL
+-- If we were looking at something specific, for example salaries, then the only truly relevant thing we would want
+-- as NOT NULL would probably be first_name, last_name, emp_no, and salary.
+-- Without further information, we really can't know.
 CREATE TABLE employees (
     emp_no INT PRIMARY KEY NOT NULL, -- should add UNIQUE here between INT and PRIMARY KEY?
     emp_title_id VARCHAR(30) NOT NULL,
