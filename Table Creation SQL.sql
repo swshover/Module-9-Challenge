@@ -9,13 +9,14 @@ DROP TABLE IF EXISTS employees;
 -- TABLE CREATION
 -- employees
 -- Has the 'more important' primary key of emp_no
+-- Everything is not null because we aren't aware of what is important. 
 CREATE TABLE employees (
     emp_no INT PRIMARY KEY NOT NULL, -- should add UNIQUE here between INT and PRIMARY KEY?
     emp_title_id VARCHAR(30) NOT NULL,
     birth_date DATE NOT NULL,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
-    sex VARCHAR(30),
+    sex VARCHAR(30) NOT NULL,
     hire_date DATE NOT NULL,
     FOREIGN KEY (emp_title_id) REFERENCES titles(title_id)
 );
